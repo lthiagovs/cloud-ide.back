@@ -10,8 +10,6 @@ async function bootstrap() {
   });
 
   setupSwagger(app);
-
-  app.setGlobalPrefix('api/v1');
   
   // Configurar graceful shutdown
   app.enableShutdownHooks();

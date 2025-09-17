@@ -15,7 +15,7 @@ import { AuthModule } from './modules/auth/auth.module';
 
 @Module({
   imports: [
-    ConfigModule.forRoot(),
+    ConfigModule.forRoot(), 
     MongooseModule.forRoot(
       process.env.MONGODB_URI || 'mongodb://cloud_ide:cloud_ide_key@localhost:27017/cloud_ide_db?authSource=admin',
       {
