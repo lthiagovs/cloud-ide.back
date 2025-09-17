@@ -10,6 +10,8 @@ import { Project, ProjectSchema } from './schemas/project.schema';
 import { FileSystemItem, FileSystemItemSchema } from './schemas/file-system-item.schema';
 import { CollaborationSession, CollaborationSessionSchema } from './schemas/collaboration-session.schema';
 import { ExecutionLog, ExecutionLogSchema } from './schemas/execution-log.schema';
+import { UserModule } from './modules/user/user.module';
+import { AuthModule } from './modules/auth/auth.module';
 
 @Module({
   imports: [
@@ -27,6 +29,8 @@ import { ExecutionLog, ExecutionLogSchema } from './schemas/execution-log.schema
       { name: CollaborationSession.name, schema: CollaborationSessionSchema },
       { name: ExecutionLog.name, schema: ExecutionLogSchema },
     ]),
+    UserModule,
+    AuthModule
   ],
   controllers: [],
   providers: [],
