@@ -12,6 +12,10 @@ import { CollaborationSession, CollaborationSessionSchema } from './schemas/coll
 import { ExecutionLog, ExecutionLogSchema } from './schemas/execution-log.schema';
 import { UserModule } from './modules/user/user.module';
 import { AuthModule } from './modules/auth/auth.module';
+import { ProjectModule } from './modules/project/project.module';
+import { FilesystemModule } from './modules/filesystem/filesystem.module';
+import { CollaborationModule } from './modules/collaboration/collaboration.module';
+import { ExecutionModule } from './modules/execution/execution.module';
 
 @Module({
   imports: [
@@ -30,7 +34,11 @@ import { AuthModule } from './modules/auth/auth.module';
       { name: ExecutionLog.name, schema: ExecutionLogSchema },
     ]),
     UserModule,
-    AuthModule
+    AuthModule,
+    ProjectModule,
+    FilesystemModule,
+    CollaborationModule,
+    ExecutionModule
   ],
   controllers: [],
   providers: [],
