@@ -13,7 +13,10 @@ import {
   HttpStatus,
 } from '@nestjs/common';
 import { ApiTags, ApiOperation, ApiResponse, ApiBearerAuth } from '@nestjs/swagger';
-import { ProjectService, CreateProjectDto, UpdateProjectDto, AddCollaboratorDto } from './project.service';
+import { CreateProjectDto } from './dto/create-project.dto';
+import { ProjectService } from './project.service';
+import { UpdateProjectDto } from './dto/update-project.dto';
+import { AddCollaboratorDto } from './dto/add-collaborator.dto';
 
 @ApiTags('projects')
 @ApiBearerAuth()
